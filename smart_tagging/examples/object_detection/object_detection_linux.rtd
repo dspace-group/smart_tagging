@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RTMapsDiagram version="4.8.0" EngineVersion="4.8" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd">
+  <RequiredPackages>
+    <File Version="2.1.6"><![CDATA[/opt/rtmaps/packages/rtmaps_image_processing_miscellaneous.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_image_processing_miscellaneous.pck]]></Relative></File>
+    <File Version="3.0.4"><![CDATA[/opt/rtmaps/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]></Relative></File>
+  </RequiredPackages>
+  <EngineProperties>
+    <Property LongName="Engine.startTimespeed" Type="1">1000</Property>
+    <Property LongName="Engine.startTime" Type="1">119000000</Property>
+    <Property LongName="Engine.session" Type="3"><![CDATA[unspecified]]></Property>
+    <Property LongName="Engine.recordingAtStart" Type="0">true</Property>
+    <Property LongName="Engine.recording" Type="0">true</Property>
+    <Property LongName="Engine.sequentialStart" Type="0">false</Property>
+    <Property LongName="Engine.shutdownTimeout" Type="1">10000000</Property>
+    <Property LongName="Engine.autoDetectStartTime" Type="0">true</Property>
+    <Property LongName="Engine.coreFunctionsToSaveInDiag" Type="4"><![CDATA[0|-1]]></Property>
+    <Property LongName="Engine.useUTCTimeReference" Type="0">false</Property>
+    <Property LongName="Engine.fastForwardThreshold" Type="1">2000</Property>
+    <Property LongName="Engine.fastRewindThreshold" Type="1">-2000</Property>
+    <Property LongName="Engine.priorityClass" Type="4"><![CDATA[3|0|Shared Time|Preemptive|Auto]]></Property>
+    <Property LongName="Engine.posixTimerThread" Type="4"><![CDATA[3|0|Auto|Timer Interval|Real Time Clock]]></Property>
+    <Property LongName="Engine.posixRealTimeClockIrqFrequency" Type="4"><![CDATA[4|0|1024|2048|4096|8192]]></Property>
+    <Property LongName="Engine.posixPreemptiveSchedulingPolicy" Type="4"><![CDATA[2|0|FIFO|Round Robin]]></Property>
+    <Property LongName="Engine.windowsUsePerformanceCounter" Type="0">true</Property>
+  </EngineProperties>
+  <ClocksManagement>
+    <Property LongName="ClocksManagement.activeClock" Type="4"><![CDATA[1|0|RTMaps_standard_clock]]></Property>
+  </ClocksManagement>
+  <Component InstanceName="AnyColorSpaceConverter_1" Model="AnyColorSpaceConverter" Version="1.0.2" x="312" y="112" z="0">
+    <Input LongName="AnyColorSpaceConverter_1.imgInput" Name="imgInput">
+      <Property LongName="AnyColorSpaceConverter_1.imgInput.readerType" Type="1">2</Property>
+      <Property LongName="AnyColorSpaceConverter_1.imgInput.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="AnyColorSpaceConverter_1.IplImageOutput" Name="IplImageOutput">
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.subsampling" Type="1">1</Property>
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.fifosize" Type="1">16</Property>
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="AnyColorSpaceConverter_1.outputPixelFormat" Type="4"><![CDATA[24|5|BGR|BGRA|GRAY|I420|IYU|RGB|RGB 555|RGB 565|RGBA|UYVY|UYY|VYUY|Y211|Y41P|YUV|YUVA|YUV 411|YUV 420|YUV 422|YUY2|YUYV|YV12|YVU9|YVYU]]></Property>
+    <Property LongName="AnyColorSpaceConverter_1.outputPlanar" Type="0">false</Property>
+    <Property LongName="AnyColorSpaceConverter_1.outputDepth" Type="4"><![CDATA[7|1|U1|U8|S8|U16|S16|S32|F32]]></Property>
+    <Property LongName="AnyColorSpaceConverter_1.threaded" Type="0">true</Property>
+    <Property LongName="AnyColorSpaceConverter_1.priority" Type="1">128</Property>
+    <Property LongName="AnyColorSpaceConverter_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="ConfidenceThreshold" Model="Potentiometer" Version="2.0.4" x="312" y="296" z="0">
+    <Output LongName="ConfidenceThreshold.output0" Name="output0">
+      <Property LongName="ConfidenceThreshold.output0.subsampling" Type="1">1</Property>
+      <Property LongName="ConfidenceThreshold.output0.fifosize" Type="1">16</Property>
+      <Property LongName="ConfidenceThreshold.output0.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ConfidenceThreshold.begin_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="ConfidenceThreshold.widget_begin_config" Type="3" SubType="256"><![CDATA[General Configuration]]></ReadOnlyProperty>
+    <Property LongName="ConfidenceThreshold.autoDirty" Type="0">true</Property>
+    <Property LongName="ConfidenceThreshold.run" Type="0">true</Property>
+    <Property LongName="ConfidenceThreshold.alwaysOnTop" Type="4"><![CDATA[4|0|Only at run time|Only at design time|No|Both at run time and design time]]></Property>
+    <Property LongName="ConfidenceThreshold.moveable" Type="0">true</Property>
+    <Property LongName="ConfidenceThreshold.hidden" Type="0">false</Property>
+    <Property LongName="ConfidenceThreshold.title" Type="3"><![CDATA[Confidence]]></Property>
+    <Property LongName="ConfidenceThreshold.x" Type="1">1321</Property>
+    <Property LongName="ConfidenceThreshold.y" Type="1">451</Property>
+    <Property LongName="ConfidenceThreshold.width" Type="1">150</Property>
+    <Property LongName="ConfidenceThreshold.height" Type="1">150</Property>
+    <Property LongName="ConfidenceThreshold.end_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="ConfidenceThreshold.widget_end_config" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="ConfidenceThreshold.vector_begin_config" Type="3" SubType="256"><![CDATA[Multiple Widgets Configuration]]></ReadOnlyProperty>
+    <Property LongName="ConfidenceThreshold.numberOfWidgets" Type="1">1</Property>
+    <Property LongName="ConfidenceThreshold.widgetLayout" Type="4"><![CDATA[2|0|Horizontal|Vertical]]></Property>
+    <Property LongName="ConfidenceThreshold.showAdditionalTitles" Type="0">false</Property>
+    <Property LongName="ConfidenceThreshold.guard_vector" Type="0" SubType="128">false</Property>
+    <ReadOnlyProperty LongName="ConfidenceThreshold.vector_end_config" Type="0" SubType="512">true</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="ConfidenceThreshold.specific_begin_config" Type="3" SubType="256"><![CDATA[Specific Configuration]]></ReadOnlyProperty>
+    <Property LongName="ConfidenceThreshold.unit0" Type="3"><![CDATA[Unit]]></Property>
+    <Property LongName="ConfidenceThreshold.min0" Type="2">0</Property>
+    <Property LongName="ConfidenceThreshold.max0" Type="2">100</Property>
+    <Property LongName="ConfidenceThreshold.value0" Type="2">30</Property>
+    <Property LongName="ConfidenceThreshold.behaviour0" Type="4"><![CDATA[2|1|On Event|Periodic]]></Property>
+    <Property LongName="ConfidenceThreshold.wheelSpeed0" Type="2">1.5</Property>
+    <Property LongName="ConfidenceThreshold.scaleMode0" Type="0">true</Property>
+    <Property LongName="ConfidenceThreshold.stepAngle0" Type="1">30</Property>
+    <Property LongName="ConfidenceThreshold.samplingTime0" Type="1" SubType="1">40000</Property>
+    <Property LongName="ConfidenceThreshold.resetAtShutdown0" Type="0">false</Property>
+    <Property LongName="ConfidenceThreshold.resetValue0" Type="2">0</Property>
+    <ReadOnlyProperty LongName="ConfidenceThreshold.specific_end_config" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="ConfidenceThreshold.threaded" Type="0">true</Property>
+    <Property LongName="ConfidenceThreshold.priority" Type="1">128</Property>
+    <Property LongName="ConfidenceThreshold.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="CurrentNumObjects" Model="DataViewer" Version="2.0.3" x="832" y="320" z="0">
+    <Input LongName="CurrentNumObjects.input_0" Name="input_0">
+      <Property LongName="CurrentNumObjects.input_0.readerType" Type="1">2</Property>
+      <Property LongName="CurrentNumObjects.input_0.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CurrentNumObjects.input_1" Name="input_1">
+      <Property LongName="CurrentNumObjects.input_1.readerType" Type="1">2</Property>
+      <Property LongName="CurrentNumObjects.input_1.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CurrentNumObjects.input_2" Name="input_2">
+      <Property LongName="CurrentNumObjects.input_2.readerType" Type="1">2</Property>
+      <Property LongName="CurrentNumObjects.input_2.subsampling" Type="1">1</Property>
+    </Input>
+    <Property LongName="CurrentNumObjects.begin_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="CurrentNumObjects.widget_begin_config" Type="3" SubType="256"><![CDATA[General Configuration]]></ReadOnlyProperty>
+    <Property LongName="CurrentNumObjects.autoDirty" Type="0">true</Property>
+    <Property LongName="CurrentNumObjects.run" Type="0">true</Property>
+    <Property LongName="CurrentNumObjects.alwaysOnTop" Type="4"><![CDATA[4|0|Only at run time|Only at design time|No|Both at run time and design time]]></Property>
+    <Property LongName="CurrentNumObjects.moveable" Type="0">true</Property>
+    <Property LongName="CurrentNumObjects.hidden" Type="0">false</Property>
+    <Property LongName="CurrentNumObjects.title" Type="3"><![CDATA[Current Number of Objects]]></Property>
+    <Property LongName="CurrentNumObjects.x" Type="1">1320</Property>
+    <Property LongName="CurrentNumObjects.y" Type="1">388</Property>
+    <Property LongName="CurrentNumObjects.width" Type="1">350</Property>
+    <Property LongName="CurrentNumObjects.height" Type="1">150</Property>
+    <Property LongName="CurrentNumObjects.end_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="CurrentNumObjects.widget_end_config" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="CurrentNumObjects.specific_begin_config" Type="3" SubType="256"><![CDATA[Specific Configuration]]></ReadOnlyProperty>
+    <Property LongName="CurrentNumObjects.nbInputs" Type="1">3</Property>
+    <Property LongName="CurrentNumObjects.compactMode" Type="0">true</Property>
+    <Property LongName="CurrentNumObjects.showInfo" Type="0">true</Property>
+    <Property LongName="CurrentNumObjects.showData" Type="0">true</Property>
+    <Property LongName="CurrentNumObjects.showPrettyTimestamp" Type="0">true</Property>
+    <Property LongName="CurrentNumObjects.float32Format" Type="3"><![CDATA[%9g]]></Property>
+    <Property LongName="CurrentNumObjects.float64Format" Type="3"><![CDATA[%9g]]></Property>
+    <Property LongName="CurrentNumObjects.integer8Format" Type="3"><![CDATA[%d]]></Property>
+    <Property LongName="CurrentNumObjects.integer16Format" Type="3"><![CDATA[%d]]></Property>
+    <Property LongName="CurrentNumObjects.integer32Format" Type="3"><![CDATA[%I32d]]></Property>
+    <Property LongName="CurrentNumObjects.integer64Format" Type="3"><![CDATA[%I64d]]></Property>
+    <Property LongName="CurrentNumObjects.unsignedInteger8Format" Type="3"><![CDATA[%u]]></Property>
+    <Property LongName="CurrentNumObjects.unsignedInteger16Format" Type="3"><![CDATA[%u]]></Property>
+    <Property LongName="CurrentNumObjects.unsignedInteger32Format" Type="3"><![CDATA[%I32u]]></Property>
+    <Property LongName="CurrentNumObjects.unsignedInteger64Format" Type="3"><![CDATA[%I64u]]></Property>
+    <Property LongName="CurrentNumObjects.hexDisplay" Type="0">false</Property>
+    <Property LongName="CurrentNumObjects.internalState" Type="3" SubType="128"><![CDATA[210;130]]></Property>
+    <Property LongName="CurrentNumObjects.expandedState" Type="3" SubType="128"><![CDATA[1|ObjectDetection.cur_num_objects;1|ObjectDetection.cur_num_cars;1|ObjectDetection.cur_num_trucks]]></Property>
+    <ReadOnlyProperty LongName="CurrentNumObjects.specific_end_config" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="CurrentNumObjects.threaded" Type="0">true</Property>
+    <Property LongName="CurrentNumObjects.priority" Type="1">128</Property>
+    <Property LongName="CurrentNumObjects.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="ImageViewer_1" Model="ImageViewer" Version="7.10.4" x="832" y="112" z="0">
+    <Input LongName="ImageViewer_1.input" Name="input">
+      <Property LongName="ImageViewer_1.input.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="ImageViewer_1.iDrawingObjects" Name="iDrawingObjects">
+      <Property LongName="ImageViewer_1.iDrawingObjects.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1.iDrawingObjects.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="ImageViewer_1.mouseClick" Name="mouseClick">
+      <Property LongName="ImageViewer_1.mouseClick.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1.mouseClick.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1.mouseClick.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_1.keyPress" Name="keyPress">
+      <Property LongName="ImageViewer_1.keyPress.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1.keyPress.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1.keyPress.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ImageViewer_1.title" Type="3"><![CDATA[Image Viewer]]></Property>
+    <Property LongName="ImageViewer_1.x" Type="1">0</Property>
+    <Property LongName="ImageViewer_1.y" Type="1">0</Property>
+    <Property LongName="ImageViewer_1.width" Type="1">0</Property>
+    <Property LongName="ImageViewer_1.height" Type="1">0</Property>
+    <Property LongName="ImageViewer_1.autoResize" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.imagePriority" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.accumulateDrawingObjects" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.updateGeometryOnDeath" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.alwaysOnTop" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.displayBorder" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.threaded" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.priority" Type="1">128</Property>
+    <Property LongName="ImageViewer_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="ObjectDetection" Model="PythonBridge" Version="3.0.3" x="512" y="200" z="0">
+    <Input LongName="ObjectDetection.image_in_0" Name="image_in_0">
+      <Property LongName="ObjectDetection.image_in_0.readerType" Type="1">0</Property>
+      <Property LongName="ObjectDetection.image_in_0.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="ObjectDetection.threshold" Name="threshold">
+      <Property LongName="ObjectDetection.threshold.readerType" Type="1">4</Property>
+      <Property LongName="ObjectDetection.threshold.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="ObjectDetection.bbox_0" Name="bbox_0">
+      <Property LongName="ObjectDetection.bbox_0.subsampling" Type="1">1</Property>
+      <Property LongName="ObjectDetection.bbox_0.fifosize" Type="1">16</Property>
+      <Property LongName="ObjectDetection.bbox_0.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ObjectDetection.total_num_objects" Name="total_num_objects">
+      <Property LongName="ObjectDetection.total_num_objects.subsampling" Type="1">1</Property>
+      <Property LongName="ObjectDetection.total_num_objects.fifosize" Type="1">16</Property>
+      <Property LongName="ObjectDetection.total_num_objects.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ObjectDetection.total_num_cars" Name="total_num_cars">
+      <Property LongName="ObjectDetection.total_num_cars.subsampling" Type="1">1</Property>
+      <Property LongName="ObjectDetection.total_num_cars.fifosize" Type="1">16</Property>
+      <Property LongName="ObjectDetection.total_num_cars.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ObjectDetection.total_num_trucks" Name="total_num_trucks">
+      <Property LongName="ObjectDetection.total_num_trucks.subsampling" Type="1">1</Property>
+      <Property LongName="ObjectDetection.total_num_trucks.fifosize" Type="1">16</Property>
+      <Property LongName="ObjectDetection.total_num_trucks.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ObjectDetection.cur_num_objects" Name="cur_num_objects">
+      <Property LongName="ObjectDetection.cur_num_objects.subsampling" Type="1">1</Property>
+      <Property LongName="ObjectDetection.cur_num_objects.fifosize" Type="1">16</Property>
+      <Property LongName="ObjectDetection.cur_num_objects.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ObjectDetection.cur_num_cars" Name="cur_num_cars">
+      <Property LongName="ObjectDetection.cur_num_cars.subsampling" Type="1">1</Property>
+      <Property LongName="ObjectDetection.cur_num_cars.fifosize" Type="1">16</Property>
+      <Property LongName="ObjectDetection.cur_num_cars.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ObjectDetection.cur_num_trucks" Name="cur_num_trucks">
+      <Property LongName="ObjectDetection.cur_num_trucks.subsampling" Type="1">1</Property>
+      <Property LongName="ObjectDetection.cur_num_trucks.fifosize" Type="1">16</Property>
+      <Property LongName="ObjectDetection.cur_num_trucks.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ObjectDetection.guard_begin" Type="0" SubType="128">true</Property>
+    <Property LongName="ObjectDetection.internalInputs" Type="3" SubType="128"><![CDATA[image_in_0;1==#threshold;1==]]></Property>
+    <Property LongName="ObjectDetection.internalOutputs" Type="3" SubType="128"><![CDATA[bbox_0;21==;200#total_num_objects;1==;16#total_num_cars;1==;16#total_num_trucks;1==;16#cur_num_objects;1==;16#cur_num_cars;1==;16#cur_num_trucks;1==;16]]></Property>
+    <Property LongName="ObjectDetection.internalProperties" Type="3" SubType="128"><![CDATA[num_images||8||1]]></Property>
+    <ReadOnlyProperty LongName="ObjectDetection.advance_begin_configuration" Type="3" SubType="256"><![CDATA[Advanced Configuration]]></ReadOnlyProperty>
+    <Property LongName="ObjectDetection.deathBehavior" Type="4"><![CDATA[3|1|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
+    <Property LongName="ObjectDetection.logDebug" Type="0">false</Property>
+    <Property LongName="ObjectDetection.showTracebackInConsole" Type="0">true</Property>
+    <Property LongName="ObjectDetection.autoReloadSubModules" Type="0">true</Property>
+    <Property LongName="ObjectDetection.memorySize" Type="1">10000000</Property>
+    <ReadOnlyProperty LongName="ObjectDetection.pythonPID" Type="1">7592</ReadOnlyProperty>
+    <Property LongName="ObjectDetection.additionalEnvironmentVariables" Type="3"><![CDATA[]]></Property>
+    <ReadOnlyProperty LongName="ObjectDetection.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="ObjectDetection.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
+    <Property LongName="ObjectDetection.pythonInstallationFolder" Type="3" SubType="32"><![CDATA[AUTO/]]></Property>
+    <Property LongName="ObjectDetection.pythonLogDirectory" Type="3" SubType="32"><![CDATA[/../../../../home/admin/.RTMaps-4.0/python_log/]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../../../../../../home/admin/.RTMaps-4.0/python_log]]></Relative></Property>
+    <Property LongName="ObjectDetection.className" Type="3"><![CDATA[ObjectDetectionBlock]]></Property>
+    <Property LongName="ObjectDetection.pythonFilename" Type="3" SubType="80"><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/object_detection.py]]></Relative></Property>
+    <Property LongName="ObjectDetection.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
+    <ReadOnlyProperty LongName="ObjectDetection.prop_end_subsection_default_opened" Type="0" SubType="512">true</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="ObjectDetection.userSubsection" Type="3" SubType="256"><![CDATA[User Properties]]></ReadOnlyProperty>
+    <Property LongName="ObjectDetection.num_images" Type="1">1</Property>
+    <ReadOnlyProperty LongName="ObjectDetection.userSubsectionEnd" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="ObjectDetection.threaded" Type="0">true</Property>
+    <Property LongName="ObjectDetection.priority" Type="1">128</Property>
+    <Property LongName="ObjectDetection.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="OverlayDrawing_1" Model="OverlayDrawing" Version="5.6.3" x="680" y="112" z="0">
+    <Input LongName="OverlayDrawing_1.input" Name="input">
+      <Property LongName="OverlayDrawing_1.input.readerType" Type="1">2</Property>
+      <Property LongName="OverlayDrawing_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="OverlayDrawing_1.drawingObjects" Name="drawingObjects">
+      <Property LongName="OverlayDrawing_1.drawingObjects.readerType" Type="1">2</Property>
+      <Property LongName="OverlayDrawing_1.drawingObjects.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="OverlayDrawing_1.output" Name="output">
+      <Property LongName="OverlayDrawing_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="OverlayDrawing_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="OverlayDrawing_1.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="OverlayDrawing_1.nbDrawingObjectsInputs" Type="1">1</Property>
+    <Property LongName="OverlayDrawing_1.imagePriority" Type="0">true</Property>
+    <Property LongName="OverlayDrawing_1.synchronized" Type="0">true</Property>
+    <Property LongName="OverlayDrawing_1.synchroTolerance" Type="1">0</Property>
+    <Property LongName="OverlayDrawing_1.scale" Type="2">1</Property>
+    <Property LongName="OverlayDrawing_1.xOffset" Type="1">0</Property>
+    <Property LongName="OverlayDrawing_1.yOffset" Type="1">0</Property>
+    <Property LongName="OverlayDrawing_1.threaded" Type="0">true</Property>
+    <Property LongName="OverlayDrawing_1.priority" Type="1">128</Property>
+    <Property LongName="OverlayDrawing_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="Player_1" Model="Player" Version="2.15.0" x="48" y="112" z="0">
+    <Output LongName="Player_1.sequence.IplImageOutput" Name="sequence.IplImageOutput">
+      <Property LongName="Player_1.sequence.IplImageOutput.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.sequence.IplImageOutput.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.sequence.IplImageOutput.periodic" Type="0">false</Property>
+      <Property LongName="Player_1.sequence.IplImageOutput.replayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.sequence.IplImageOutput.fastReplayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.sequence.IplImageOutput.replayMode" Type="4"><![CDATA[3|0|Normal|Immediate|Timestamp]]></Property>
+      <Property LongName="Player_1.sequence.IplImageOutput.autopause" Type="0">false</Property>
+      <Property LongName="Player_1.sequence.IplImageOutput.threaded" Type="0">true</Property>
+      <Property LongName="Player_1.sequence.IplImageOutput.priority" Type="1">128</Property>
+      <Property LongName="Player_1.sequence.IplImageOutput.replayThreadPriority" Type="1">128</Property>
+      <Property LongName="Player_1.sequence.IplImageOutput.video_stream_copy_output_buffer" Type="1">0</Property>
+    </Output>
+    <Property LongName="Player_1.file" Type="3" SubType="80"><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/datasets/RecFile_1_20220112_120800.rec]]></Relative></Property>
+    <Property LongName="Player_1.offset" Type="1">0</Property>
+    <Property LongName="Player_1.beginning" Type="1">0</Property>
+    <Property LongName="Player_1.end" Type="1">0</Property>
+    <Property LongName="Player_1.timelag" Type="1">-1</Property>
+    <Property LongName="Player_1.update" Type="0">true</Property>
+    <ReadOnlyProperty LongName="Player_1.replayPath" Type="3"><![CDATA[/home/examples/object_detection/datasets/]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.comments" Type="3"><![CDATA[]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.ahead" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.percentage" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.time" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.first" Type="1">120000000</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.last" Type="1">150000000</ReadOnlyProperty>
+    <Property LongName="Player_1.serverThreadPriority" Type="1">200</Property>
+    <Property LongName="Player_1.mainClientThreadPriority" Type="1">200</Property>
+    <Property LongName="Player_1.threaded" Type="0">true</Property>
+    <Property LongName="Player_1.priority" Type="1">200</Property>
+    <Property LongName="Player_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="TotalNumObjects" Model="DataViewer" Version="2.0.3" x="832" y="216" z="0">
+    <Input LongName="TotalNumObjects.input_0" Name="input_0">
+      <Property LongName="TotalNumObjects.input_0.readerType" Type="1">2</Property>
+      <Property LongName="TotalNumObjects.input_0.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="TotalNumObjects.input_1" Name="input_1">
+      <Property LongName="TotalNumObjects.input_1.readerType" Type="1">2</Property>
+      <Property LongName="TotalNumObjects.input_1.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="TotalNumObjects.input_2" Name="input_2">
+      <Property LongName="TotalNumObjects.input_2.readerType" Type="1">2</Property>
+      <Property LongName="TotalNumObjects.input_2.subsampling" Type="1">1</Property>
+    </Input>
+    <Property LongName="TotalNumObjects.begin_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="TotalNumObjects.widget_begin_config" Type="3" SubType="256"><![CDATA[General Configuration]]></ReadOnlyProperty>
+    <Property LongName="TotalNumObjects.autoDirty" Type="0">true</Property>
+    <Property LongName="TotalNumObjects.run" Type="0">true</Property>
+    <Property LongName="TotalNumObjects.alwaysOnTop" Type="4"><![CDATA[4|0|Only at run time|Only at design time|No|Both at run time and design time]]></Property>
+    <Property LongName="TotalNumObjects.moveable" Type="0">true</Property>
+    <Property LongName="TotalNumObjects.hidden" Type="0">false</Property>
+    <Property LongName="TotalNumObjects.title" Type="3"><![CDATA[Total Number of Objects]]></Property>
+    <Property LongName="TotalNumObjects.x" Type="1">1320</Property>
+    <Property LongName="TotalNumObjects.y" Type="1">388</Property>
+    <Property LongName="TotalNumObjects.width" Type="1">350</Property>
+    <Property LongName="TotalNumObjects.height" Type="1">150</Property>
+    <Property LongName="TotalNumObjects.end_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="TotalNumObjects.widget_end_config" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="TotalNumObjects.specific_begin_config" Type="3" SubType="256"><![CDATA[Specific Configuration]]></ReadOnlyProperty>
+    <Property LongName="TotalNumObjects.nbInputs" Type="1">3</Property>
+    <Property LongName="TotalNumObjects.compactMode" Type="0">true</Property>
+    <Property LongName="TotalNumObjects.showInfo" Type="0">true</Property>
+    <Property LongName="TotalNumObjects.showData" Type="0">true</Property>
+    <Property LongName="TotalNumObjects.showPrettyTimestamp" Type="0">true</Property>
+    <Property LongName="TotalNumObjects.float32Format" Type="3"><![CDATA[%9g]]></Property>
+    <Property LongName="TotalNumObjects.float64Format" Type="3"><![CDATA[%9g]]></Property>
+    <Property LongName="TotalNumObjects.integer8Format" Type="3"><![CDATA[%d]]></Property>
+    <Property LongName="TotalNumObjects.integer16Format" Type="3"><![CDATA[%d]]></Property>
+    <Property LongName="TotalNumObjects.integer32Format" Type="3"><![CDATA[%I32d]]></Property>
+    <Property LongName="TotalNumObjects.integer64Format" Type="3"><![CDATA[%I64d]]></Property>
+    <Property LongName="TotalNumObjects.unsignedInteger8Format" Type="3"><![CDATA[%u]]></Property>
+    <Property LongName="TotalNumObjects.unsignedInteger16Format" Type="3"><![CDATA[%u]]></Property>
+    <Property LongName="TotalNumObjects.unsignedInteger32Format" Type="3"><![CDATA[%I32u]]></Property>
+    <Property LongName="TotalNumObjects.unsignedInteger64Format" Type="3"><![CDATA[%I64u]]></Property>
+    <Property LongName="TotalNumObjects.hexDisplay" Type="0">false</Property>
+    <Property LongName="TotalNumObjects.internalState" Type="3" SubType="128"><![CDATA[220;120]]></Property>
+    <Property LongName="TotalNumObjects.expandedState" Type="3" SubType="128"><![CDATA[1|ObjectDetection.total_num_objects;1|ObjectDetection.total_num_cars;1|ObjectDetection.total_num_trucks]]></Property>
+    <ReadOnlyProperty LongName="TotalNumObjects.specific_end_config" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="TotalNumObjects.threaded" Type="0">true</Property>
+    <Property LongName="TotalNumObjects.priority" Type="1">128</Property>
+    <Property LongName="TotalNumObjects.autoStart" Type="0">true</Property>
+  </Component>
+  <Connection Output="Player_1.sequence.IplImageOutput" Input="AnyColorSpaceConverter_1.imgInput">
+    <Replay Method="video_file"/>
+  </Connection>
+  <Connection Output="ObjectDetection.cur_num_objects" Input="CurrentNumObjects.input_0"/>
+  <Connection Output="ObjectDetection.cur_num_cars" Input="CurrentNumObjects.input_1"/>
+  <Connection Output="ObjectDetection.cur_num_trucks" Input="CurrentNumObjects.input_2"/>
+  <Connection Output="OverlayDrawing_1.output" Input="ImageViewer_1.input"/>
+  <Connection Output="AnyColorSpaceConverter_1.IplImageOutput" Input="ObjectDetection.image_in_0"/>
+  <Connection Output="ConfidenceThreshold.output0" Input="ObjectDetection.threshold"/>
+  <Connection Output="AnyColorSpaceConverter_1.IplImageOutput" Input="OverlayDrawing_1.input"/>
+  <Connection Output="ObjectDetection.bbox_0" Input="OverlayDrawing_1.drawingObjects"/>
+  <Connection Output="ObjectDetection.total_num_objects" Input="TotalNumObjects.input_0"/>
+  <Connection Output="ObjectDetection.total_num_cars" Input="TotalNumObjects.input_1"/>
+  <Connection Output="ObjectDetection.total_num_trucks" Input="TotalNumObjects.input_2"/>
+  <RTBoardView ID="JavaStudio1.0">
+    <ComponentBox InstanceName="AnyColorSpaceConverter_1_1_2" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="Driver_Camera_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="image_viewer_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="ImageViewer_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="ImageViewer_1_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="ImageViewer_1_1_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="PythonBridge_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="Rear_Camera_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="threshold_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="total_num_objects_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="video_stream_decoder_1_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="video_stream_decoder_1_1_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ConnectionShape InstanceName="adapt_color_map.input" color="0"/>
+    <ConnectionShape InstanceName="adapt_color_map_1.input" color="0"/>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_1.imgInput" color="0"/>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_2.imgInput" color="0"/>
+    <ConnectionShape InstanceName="CANDecoder_1.input" color="0"/>
+    <ConnectionShape InstanceName="clean_stream.input" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects.input_0" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects.input_1" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects.input_2" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects_1.input_2" color="0"/>
+    <ConnectionShape InstanceName="CurrentNumObjects.input_0" color="0"/>
+    <ConnectionShape InstanceName="CurrentNumObjects.input_1" color="0"/>
+    <ConnectionShape InstanceName="CurrentNumObjects.input_2" color="0"/>
+    <ConnectionShape InstanceName="DataViewer_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="delphi_esr_radar_1_1.canFrame" color="0"/>
+    <ConnectionShape InstanceName="delphi_esr_radar_targets_to_realobjs_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="dropout.input0" color="0"/>
+    <ConnectionShape InstanceName="dropout_rate.input" color="0"/>
+    <ConnectionShape InstanceName="dropout_rate_1.input" color="0"/>
+    <ConnectionShape InstanceName="dropout_statistics.input_0" color="0"/>
+    <ConnectionShape InstanceName="dropout_statistics.input_1" color="0"/>
+    <ConnectionShape InstanceName="dropout_statistics_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="dropout_statistics_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="Front_Camera_1.input" color="0"/>
+    <ConnectionShape InstanceName="Front_Camera_Display_1.drawingObjects_1" color="0"/>
+    <ConnectionShape InstanceName="Front_Camera_Display_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="Get_Timestamps_1.input" color="0"/>
+    <ConnectionShape InstanceName="gps.iStream8" color="0"/>
+    <ConnectionShape InstanceName="image_viewer.iDrawingObjects" color="0"/>
+    <ConnectionShape InstanceName="image_viewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="image_viewer_2.iDrawingObjects" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1_1_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_2.input" color="0"/>
+    <ConnectionShape InstanceName="novelty_module.image_in" color="0"/>
+    <ConnectionShape InstanceName="novelty_module.threshold" color="0"/>
+    <ConnectionShape InstanceName="NoveltyModule.image_in" color="0"/>
+    <ConnectionShape InstanceName="object_detection.image_in" color="0"/>
+    <ConnectionShape InstanceName="object_detection.threshold" color="0"/>
+    <ConnectionShape InstanceName="object_detection_1.image_in" color="0"/>
+    <ConnectionShape InstanceName="ObjectDetection.image_in" color="0"/>
+    <ConnectionShape InstanceName="ObjectDetection.image_in_0" color="0"/>
+    <ConnectionShape InstanceName="ObjectDetection.image_in_1" color="0"/>
+    <ConnectionShape InstanceName="ObjectDetection.threshold" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1.drawingObjects" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1.input" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1_1.drawingObjects" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_2.drawingObjects" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_2.input" color="0"/>
+    <ConnectionShape InstanceName="Projection2_1_1.real_objects" color="0"/>
+    <ConnectionShape InstanceName="rear_camera.input_stream" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_188_CAN_VEH_Speed.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_190_CAN_VEH_Accel_Pedal_Demand.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_190_CAN_VEH_Brake_Pedal_Pos.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_390_CAN_VEH_U_Bat_HV.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_481_CAN_VEH_Park_Brake_State.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_485_CAN_VEH_Steering_Angle.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_497_CAN_VEH_Heat_AC_Disable.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_501_CAN_VEH_PNRDL.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_711_CAN_VEH_I_Bat_HV.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.front_camera.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.gps.position_lla.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.Bypass_TagsFromRTag.output_1.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.CAN4_Measures_1.o_can.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.CAN5_IMU_1.o_can.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.CAN6_Vehicle_1.o_can.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.FlexCard_CAN_Delphi_ESR_Radar.o_can.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.SerialPort_Ublox_NMEA.streamOutput.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.UDPSocket_Velodyne_VLP16.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.rear_camera.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.recording.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.video_stream_decoder_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.video_stream_decoder_1_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.video_stream_decoder_1_1_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.video_stream_decoder_1_1_1_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_188_CAN_VEH_Speed.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_190_CAN_VEH_Accel_Pedal_Demand.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_190_CAN_VEH_Brake_Pedal_Pos.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_390_CAN_VEH_U_Bat_HV.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_481_CAN_VEH_Park_Brake_State.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_485_CAN_VEH_Steering_Angle.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_497_CAN_VEH_Heat_AC_Disable.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_501_CAN_VEH_PNRDL.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_711_CAN_VEH_I_Bat_HV.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.front_camera.output.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.gps.position_lla.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.rear_camera.output.input" color="0"/>
+    <ConnectionShape InstanceName="recording.input" color="0"/>
+    <ConnectionShape InstanceName="redundancy_reduction.image_in" color="0"/>
+    <ConnectionShape InstanceName="redundancy_reduction.threshold" color="0"/>
+    <ConnectionShape InstanceName="redundancy_reduction_1.image_in" color="0"/>
+    <ConnectionShape InstanceName="redundancy_reduction_1.threshold" color="0"/>
+    <ConnectionShape InstanceName="redundant_stream.iDrawingObjects" color="0"/>
+    <ConnectionShape InstanceName="redundant_stream.input" color="0"/>
+    <ConnectionShape InstanceName="resampler_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="SampleRate_2.input" color="0"/>
+    <ConnectionShape InstanceName="Splitter_1.input" color="0"/>
+    <ConnectionShape InstanceName="stream_to_frame.input_stream" color="0"/>
+    <ConnectionShape InstanceName="stream_to_frame_1.input_stream" color="0"/>
+    <ConnectionShape InstanceName="TextViewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="time_resampling.index" color="0"/>
+    <ConnectionShape InstanceName="time_resampling.input_2" color="0"/>
+    <ConnectionShape InstanceName="timestamp_to_timestring_1.timestamp_usec" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects.input_0" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects.input_1" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects.input_2" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects_1.input_2" color="0"/>
+    <ConnectionShape InstanceName="TotalNumObjects.input_0" color="0"/>
+    <ConnectionShape InstanceName="TotalNumObjects.input_1" color="0"/>
+    <ConnectionShape InstanceName="TotalNumObjects.input_2" color="0"/>
+    <ConnectionShape InstanceName="trigger.threshold" color="0"/>
+    <ConnectionShape InstanceName="trigger.x" color="0"/>
+    <ConnectionShape InstanceName="trigger_visualization.inputA" color="0"/>
+    <ConnectionShape InstanceName="trigger_visualization.inputB" color="0"/>
+    <ConnectionShape InstanceName="video_stream_decoder_1.input_stream" color="0"/>
+    <ConnectionShape InstanceName="YUV2RGB_1.input" color="0"/>
+  </RTBoardView>
+</RTMapsDiagram>

@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RTMapsDiagram version="4.8.0" EngineVersion="4.8" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd">
+  <RequiredPackages>
+    <File Version="2.1.6"><![CDATA[/opt/rtmaps/packages/rtmaps_image_processing_miscellaneous.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_image_processing_miscellaneous.pck]]></Relative></File>
+    <File Version="3.0.4"><![CDATA[/opt/rtmaps/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]></Relative></File>
+  </RequiredPackages>
+  <EngineProperties>
+    <Property LongName="Engine.startTimespeed" Type="1">1000</Property>
+    <Property LongName="Engine.startTime" Type="1">170286388</Property>
+    <Property LongName="Engine.session" Type="3"><![CDATA[unspecified]]></Property>
+    <Property LongName="Engine.recordingAtStart" Type="0">true</Property>
+    <Property LongName="Engine.recording" Type="0">true</Property>
+    <Property LongName="Engine.sequentialStart" Type="0">false</Property>
+    <Property LongName="Engine.shutdownTimeout" Type="1">10000000</Property>
+    <Property LongName="Engine.autoDetectStartTime" Type="0">true</Property>
+    <Property LongName="Engine.coreFunctionsToSaveInDiag" Type="4"><![CDATA[0|-1]]></Property>
+    <Property LongName="Engine.useUTCTimeReference" Type="0">false</Property>
+    <Property LongName="Engine.fastForwardThreshold" Type="1">2000</Property>
+    <Property LongName="Engine.fastRewindThreshold" Type="1">-2000</Property>
+    <Property LongName="Engine.priorityClass" Type="4"><![CDATA[3|0|Shared Time|Preemptive|Auto]]></Property>
+    <Property LongName="Engine.posixTimerThread" Type="4"><![CDATA[3|0|Auto|Timer Interval|Real Time Clock]]></Property>
+    <Property LongName="Engine.posixRealTimeClockIrqFrequency" Type="4"><![CDATA[4|0|1024|2048|4096|8192]]></Property>
+    <Property LongName="Engine.posixPreemptiveSchedulingPolicy" Type="4"><![CDATA[2|0|FIFO|Round Robin]]></Property>
+    <Property LongName="Engine.windowsUsePerformanceCounter" Type="0">true</Property>
+  </EngineProperties>
+  <ClocksManagement>
+    <Property LongName="ClocksManagement.activeClock" Type="4"><![CDATA[1|0|RTMaps_standard_clock]]></Property>
+  </ClocksManagement>
+  <Component InstanceName="AnyColorSpaceConverter_1" Model="AnyColorSpaceConverter" Version="1.0.2" x="256" y="72" z="0">
+    <Input LongName="AnyColorSpaceConverter_1.imgInput" Name="imgInput">
+      <Property LongName="AnyColorSpaceConverter_1.imgInput.readerType" Type="1">2</Property>
+      <Property LongName="AnyColorSpaceConverter_1.imgInput.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="AnyColorSpaceConverter_1.IplImageOutput" Name="IplImageOutput">
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.subsampling" Type="1">1</Property>
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.fifosize" Type="1">16</Property>
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="AnyColorSpaceConverter_1.outputPixelFormat" Type="4"><![CDATA[24|0|BGR|BGRA|GRAY|I420|IYU|RGB|RGB 555|RGB 565|RGBA|UYVY|UYY|VYUY|Y211|Y41P|YUV|YUVA|YUV 411|YUV 420|YUV 422|YUY2|YUYV|YV12|YVU9|YVYU]]></Property>
+    <Property LongName="AnyColorSpaceConverter_1.outputPlanar" Type="0">false</Property>
+    <Property LongName="AnyColorSpaceConverter_1.outputDepth" Type="4"><![CDATA[7|1|U1|U8|S8|U16|S16|S32|F32]]></Property>
+    <Property LongName="AnyColorSpaceConverter_1.threaded" Type="0">true</Property>
+    <Property LongName="AnyColorSpaceConverter_1.priority" Type="1">128</Property>
+    <Property LongName="AnyColorSpaceConverter_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="clean_stream" Model="ImageViewer" Version="7.10.4" x="888" y="184" z="0">
+    <Input LongName="clean_stream.input" Name="input">
+      <Property LongName="clean_stream.input.readerType" Type="1">2</Property>
+      <Property LongName="clean_stream.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="clean_stream.iDrawingObjects" Name="iDrawingObjects">
+      <Property LongName="clean_stream.iDrawingObjects.readerType" Type="1">2</Property>
+      <Property LongName="clean_stream.iDrawingObjects.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="clean_stream.mouseClick" Name="mouseClick">
+      <Property LongName="clean_stream.mouseClick.subsampling" Type="1">1</Property>
+      <Property LongName="clean_stream.mouseClick.fifosize" Type="1">16</Property>
+      <Property LongName="clean_stream.mouseClick.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="clean_stream.keyPress" Name="keyPress">
+      <Property LongName="clean_stream.keyPress.subsampling" Type="1">1</Property>
+      <Property LongName="clean_stream.keyPress.fifosize" Type="1">16</Property>
+      <Property LongName="clean_stream.keyPress.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="clean_stream.title" Type="3"><![CDATA[Image Viewer]]></Property>
+    <Property LongName="clean_stream.x" Type="1">0</Property>
+    <Property LongName="clean_stream.y" Type="1">388</Property>
+    <Property LongName="clean_stream.width" Type="1">1280</Property>
+    <Property LongName="clean_stream.height" Type="1">720</Property>
+    <Property LongName="clean_stream.autoResize" Type="0">true</Property>
+    <Property LongName="clean_stream.imagePriority" Type="0">false</Property>
+    <Property LongName="clean_stream.accumulateDrawingObjects" Type="0">false</Property>
+    <Property LongName="clean_stream.updateGeometryOnDeath" Type="0">true</Property>
+    <Property LongName="clean_stream.alwaysOnTop" Type="0">false</Property>
+    <Property LongName="clean_stream.displayBorder" Type="0">false</Property>
+    <Property LongName="clean_stream.threaded" Type="0">true</Property>
+    <Property LongName="clean_stream.priority" Type="1">0</Property>
+    <Property LongName="clean_stream.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="NoveltyModule" Model="PythonBridge" Version="3.0.3" x="392" y="264" z="0">
+    <Input LongName="NoveltyModule.image_in" Name="image_in">
+      <Property LongName="NoveltyModule.image_in.readerType" Type="1">0</Property>
+      <Property LongName="NoveltyModule.image_in.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="NoveltyModule.similarity" Name="similarity">
+      <Property LongName="NoveltyModule.similarity.subsampling" Type="1">1</Property>
+      <Property LongName="NoveltyModule.similarity.fifosize" Type="1">16</Property>
+      <Property LongName="NoveltyModule.similarity.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="NoveltyModule.guard_begin" Type="0" SubType="128">true</Property>
+    <Property LongName="NoveltyModule.internalInputs" Type="3" SubType="128"><![CDATA[image_in;1==]]></Property>
+    <Property LongName="NoveltyModule.internalOutputs" Type="3" SubType="128"><![CDATA[similarity;0==;1]]></Property>
+    <Property LongName="NoveltyModule.internalProperties" Type="3" SubType="128"><![CDATA[]]></Property>
+    <ReadOnlyProperty LongName="NoveltyModule.advance_begin_configuration" Type="3" SubType="256"><![CDATA[Advanced Configuration]]></ReadOnlyProperty>
+    <Property LongName="NoveltyModule.deathBehavior" Type="4"><![CDATA[3|1|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
+    <Property LongName="NoveltyModule.logDebug" Type="0">false</Property>
+    <Property LongName="NoveltyModule.showTracebackInConsole" Type="0">true</Property>
+    <Property LongName="NoveltyModule.autoReloadSubModules" Type="0">true</Property>
+    <Property LongName="NoveltyModule.memorySize" Type="1">10000000</Property>
+    <ReadOnlyProperty LongName="NoveltyModule.pythonPID" Type="1">7984</ReadOnlyProperty>
+    <Property LongName="NoveltyModule.additionalEnvironmentVariables" Type="3"><![CDATA[]]></Property>
+    <ReadOnlyProperty LongName="NoveltyModule.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="NoveltyModule.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
+    <Property LongName="NoveltyModule.pythonInstallationFolder" Type="3" SubType="32"><![CDATA[AUTO/]]></Property>
+    <Property LongName="NoveltyModule.pythonLogDirectory" Type="3" SubType="32"><![CDATA[/../../../../home/admin/.RTMaps-4.0/python_log/]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../../../../../../home/admin/.RTMaps-4.0/python_log]]></Relative></Property>
+    <Property LongName="NoveltyModule.className" Type="3"><![CDATA[NoveltyFilter]]></Property>
+    <Property LongName="NoveltyModule.pythonFilename" Type="3" SubType="80"><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/novelty_detection.py]]></Relative></Property>
+    <Property LongName="NoveltyModule.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
+    <ReadOnlyProperty LongName="NoveltyModule.prop_end_subsection_default_opened" Type="0" SubType="512">true</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="NoveltyModule.userSubsection" Type="3" SubType="256"><![CDATA[User Properties]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="NoveltyModule.userSubsectionEnd" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="NoveltyModule.threaded" Type="0">true</Property>
+    <Property LongName="NoveltyModule.priority" Type="1">128</Property>
+    <Property LongName="NoveltyModule.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="Player_1" Model="Player" Version="2.15.0" x="48" y="72" z="0">
+    <Output LongName="Player_1.recording.output" Name="recording.output">
+      <Property LongName="Player_1.recording.output.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.recording.output.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.recording.output.periodic" Type="0">false</Property>
+      <Property LongName="Player_1.recording.output.replayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.recording.output.fastReplayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.recording.output.replayMode" Type="4"><![CDATA[3|0|Normal|Immediate|Timestamp]]></Property>
+      <Property LongName="Player_1.recording.output.autopause" Type="0">false</Property>
+      <Property LongName="Player_1.recording.output.threaded" Type="0">true</Property>
+      <Property LongName="Player_1.recording.output.priority" Type="1">128</Property>
+      <Property LongName="Player_1.recording.output.replayThreadPriority" Type="1">128</Property>
+      <Property LongName="Player_1.recording.output.video_stream_copy_output_buffer" Type="1">0</Property>
+    </Output>
+    <Property LongName="Player_1.file" Type="3" SubType="80"><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/datasets/RecFile_1_20210922_140719.rec]]></Relative></Property>
+    <Property LongName="Player_1.offset" Type="1">0</Property>
+    <Property LongName="Player_1.beginning" Type="1">0</Property>
+    <Property LongName="Player_1.end" Type="1">0</Property>
+    <Property LongName="Player_1.timelag" Type="1">-1</Property>
+    <Property LongName="Player_1.update" Type="0">true</Property>
+    <ReadOnlyProperty LongName="Player_1.replayPath" Type="3"><![CDATA[/home/examples/novelty_detection/datasets/]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.comments" Type="3"><![CDATA[]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.ahead" Type="1">299580</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.percentage" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.time" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.first" Type="1">171286388</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.last" Type="1">349982087</ReadOnlyProperty>
+    <Property LongName="Player_1.serverThreadPriority" Type="1">200</Property>
+    <Property LongName="Player_1.mainClientThreadPriority" Type="1">200</Property>
+    <Property LongName="Player_1.threaded" Type="0">true</Property>
+    <Property LongName="Player_1.priority" Type="1">200</Property>
+    <Property LongName="Player_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="redundant_stream" Model="ImageViewer" Version="7.10.4" x="888" y="72" z="0">
+    <Input LongName="redundant_stream.input" Name="input">
+      <Property LongName="redundant_stream.input.readerType" Type="1">2</Property>
+      <Property LongName="redundant_stream.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="redundant_stream.iDrawingObjects" Name="iDrawingObjects">
+      <Property LongName="redundant_stream.iDrawingObjects.readerType" Type="1">2</Property>
+      <Property LongName="redundant_stream.iDrawingObjects.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="redundant_stream.mouseClick" Name="mouseClick">
+      <Property LongName="redundant_stream.mouseClick.subsampling" Type="1">1</Property>
+      <Property LongName="redundant_stream.mouseClick.fifosize" Type="1">16</Property>
+      <Property LongName="redundant_stream.mouseClick.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="redundant_stream.keyPress" Name="keyPress">
+      <Property LongName="redundant_stream.keyPress.subsampling" Type="1">1</Property>
+      <Property LongName="redundant_stream.keyPress.fifosize" Type="1">16</Property>
+      <Property LongName="redundant_stream.keyPress.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="redundant_stream.title" Type="3"><![CDATA[Image Viewer]]></Property>
+    <Property LongName="redundant_stream.x" Type="1">0</Property>
+    <Property LongName="redundant_stream.y" Type="1">388</Property>
+    <Property LongName="redundant_stream.width" Type="1">1280</Property>
+    <Property LongName="redundant_stream.height" Type="1">720</Property>
+    <Property LongName="redundant_stream.autoResize" Type="0">true</Property>
+    <Property LongName="redundant_stream.imagePriority" Type="0">false</Property>
+    <Property LongName="redundant_stream.accumulateDrawingObjects" Type="0">false</Property>
+    <Property LongName="redundant_stream.updateGeometryOnDeath" Type="0">true</Property>
+    <Property LongName="redundant_stream.alwaysOnTop" Type="0">false</Property>
+    <Property LongName="redundant_stream.displayBorder" Type="0">false</Property>
+    <Property LongName="redundant_stream.threaded" Type="0">true</Property>
+    <Property LongName="redundant_stream.priority" Type="1">0</Property>
+    <Property LongName="redundant_stream.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="threshold" Model="Potentiometer" Version="2.0.4" x="392" y="408" z="0">
+    <Output LongName="threshold.output0" Name="output0">
+      <Property LongName="threshold.output0.subsampling" Type="1">1</Property>
+      <Property LongName="threshold.output0.fifosize" Type="1">16</Property>
+      <Property LongName="threshold.output0.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="threshold.begin_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="threshold.widget_begin_config" Type="3" SubType="256"><![CDATA[General Configuration]]></ReadOnlyProperty>
+    <Property LongName="threshold.autoDirty" Type="0">true</Property>
+    <Property LongName="threshold.run" Type="0">true</Property>
+    <Property LongName="threshold.alwaysOnTop" Type="4"><![CDATA[4|0|Only at run time|Only at design time|No|Both at run time and design time]]></Property>
+    <Property LongName="threshold.moveable" Type="0">true</Property>
+    <Property LongName="threshold.hidden" Type="0">false</Property>
+    <Property LongName="threshold.title" Type="3"><![CDATA[threshold]]></Property>
+    <Property LongName="threshold.x" Type="1">1419</Property>
+    <Property LongName="threshold.y" Type="1">755</Property>
+    <Property LongName="threshold.width" Type="1">457</Property>
+    <Property LongName="threshold.height" Type="1">340</Property>
+    <Property LongName="threshold.end_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="threshold.widget_end_config" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="threshold.vector_begin_config" Type="3" SubType="256"><![CDATA[Multiple Widgets Configuration]]></ReadOnlyProperty>
+    <Property LongName="threshold.numberOfWidgets" Type="1">1</Property>
+    <Property LongName="threshold.widgetLayout" Type="4"><![CDATA[2|0|Horizontal|Vertical]]></Property>
+    <Property LongName="threshold.showAdditionalTitles" Type="0">false</Property>
+    <Property LongName="threshold.guard_vector" Type="0" SubType="128">false</Property>
+    <ReadOnlyProperty LongName="threshold.vector_end_config" Type="0" SubType="512">true</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="threshold.specific_begin_config" Type="3" SubType="256"><![CDATA[Specific Configuration]]></ReadOnlyProperty>
+    <Property LongName="threshold.unit0" Type="3"><![CDATA[Unit]]></Property>
+    <Property LongName="threshold.min0" Type="2">0.9</Property>
+    <Property LongName="threshold.max0" Type="2">1</Property>
+    <Property LongName="threshold.value0" Type="2">0.975</Property>
+    <Property LongName="threshold.behaviour0" Type="4"><![CDATA[2|1|On Event|Periodic]]></Property>
+    <Property LongName="threshold.wheelSpeed0" Type="2">1.5</Property>
+    <Property LongName="threshold.scaleMode0" Type="0">true</Property>
+    <Property LongName="threshold.stepAngle0" Type="1">30</Property>
+    <Property LongName="threshold.samplingTime0" Type="1" SubType="1">40000</Property>
+    <Property LongName="threshold.resetAtShutdown0" Type="0">false</Property>
+    <Property LongName="threshold.resetValue0" Type="2">0</Property>
+    <ReadOnlyProperty LongName="threshold.specific_end_config" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="threshold.threaded" Type="0">true</Property>
+    <Property LongName="threshold.priority" Type="1">128</Property>
+    <Property LongName="threshold.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="time_resampling" Model="switcher" Version="1.3" x="728" y="184" z="0">
+    <Input LongName="time_resampling.input_1" Name="input_1">
+      <Property LongName="time_resampling.input_1.readerType" Type="1">2</Property>
+      <Property LongName="time_resampling.input_1.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="time_resampling.input_2" Name="input_2">
+      <Property LongName="time_resampling.input_2.readerType" Type="1">2</Property>
+      <Property LongName="time_resampling.input_2.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="time_resampling.index" Name="index">
+      <Property LongName="time_resampling.index.readerType" Type="1">2</Property>
+      <Property LongName="time_resampling.index.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="time_resampling.output" Name="output">
+      <Property LongName="time_resampling.output.subsampling" Type="1">1</Property>
+      <Property LongName="time_resampling.output.fifosize" Type="1">16</Property>
+      <Property LongName="time_resampling.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="time_resampling.nb_channels_in" Type="1">2</Property>
+    <Property LongName="time_resampling.source_channel_index" Type="4"><![CDATA[2|0|input_1|input_2]]></Property>
+    <Property LongName="time_resampling.at_switch" Type="4"><![CDATA[2|0|Wait for next sample on corresponding input|Emit available sample on corresponding input]]></Property>
+    <Property LongName="time_resampling.threaded" Type="0">true</Property>
+    <Property LongName="time_resampling.priority" Type="1">128</Property>
+    <Property LongName="time_resampling.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="trigger" Model="Condition" Version="9.0.0" x="568" y="328" z="0">
+    <Input LongName="trigger.x" Name="x">
+      <Property LongName="trigger.x.readerType" Type="1">2</Property>
+      <Property LongName="trigger.x.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="trigger.threshold" Name="threshold">
+      <Property LongName="trigger.threshold.readerType" Type="1">2</Property>
+      <Property LongName="trigger.threshold.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="trigger.output" Name="output">
+      <Property LongName="trigger.output.subsampling" Type="1">1</Property>
+      <Property LongName="trigger.output.fifosize" Type="1">16</Property>
+      <Property LongName="trigger.output.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="trigger.outputInteger" Name="outputInteger">
+      <Property LongName="trigger.outputInteger.subsampling" Type="1">1</Property>
+      <Property LongName="trigger.outputInteger.fifosize" Type="1">16</Property>
+      <Property LongName="trigger.outputInteger.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="trigger.outputInteger64" Name="outputInteger64">
+      <Property LongName="trigger.outputInteger64.subsampling" Type="1">1</Property>
+      <Property LongName="trigger.outputInteger64.fifosize" Type="1">16</Property>
+      <Property LongName="trigger.outputInteger64.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="trigger.outputFloat32" Name="outputFloat32">
+      <Property LongName="trigger.outputFloat32.subsampling" Type="1">1</Property>
+      <Property LongName="trigger.outputFloat32.fifosize" Type="1">16</Property>
+      <Property LongName="trigger.outputFloat32.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="trigger.condition" Type="3"><![CDATA[x < threshold]]></Property>
+    <Property LongName="trigger.when" Type="4"><![CDATA[4|0|condition is evaluated|condition is true|condition becomes true|condition state changes]]></Property>
+    <Property LongName="trigger.expression" Type="3"><![CDATA[1.]]></Property>
+    <Property LongName="trigger.expression_false" Type="3"><![CDATA[0.]]></Property>
+    <Property LongName="trigger.autoConnect" Type="0">false</Property>
+    <Property LongName="trigger.then" Type="3"><![CDATA[]]></Property>
+    <Property LongName="trigger.else" Type="3"><![CDATA[]]></Property>
+    <Property LongName="trigger.preFormat" Type="0">false</Property>
+    <Property LongName="trigger.name" Type="3"><![CDATA[]]></Property>
+    <Property LongName="trigger.unit" Type="3"><![CDATA[]]></Property>
+    <Property LongName="trigger.period" Type="1">100000</Property>
+    <Property LongName="trigger.async_commands" Type="0">true</Property>
+    <Property LongName="trigger.synchroTolerance" Type="1">-1</Property>
+    <Property LongName="trigger.threaded" Type="0">true</Property>
+    <Property LongName="trigger.priority" Type="1">128</Property>
+    <Property LongName="trigger.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="trigger_visualization" Model="Oscilloscope" Version="5.0.4" x="888" y="328" z="0">
+    <Input LongName="trigger_visualization.inputA" Name="inputA">
+      <Property LongName="trigger_visualization.inputA.readerType" Type="1">2</Property>
+      <Property LongName="trigger_visualization.inputA.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="trigger_visualization.inputB" Name="inputB">
+      <Property LongName="trigger_visualization.inputB.readerType" Type="1">2</Property>
+      <Property LongName="trigger_visualization.inputB.subsampling" Type="1">1</Property>
+    </Input>
+    <Property LongName="trigger_visualization.begin_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="trigger_visualization.widget_begin_config" Type="3" SubType="256"><![CDATA[General Configuration]]></ReadOnlyProperty>
+    <Property LongName="trigger_visualization.autoDirty" Type="0">true</Property>
+    <Property LongName="trigger_visualization.run" Type="0">true</Property>
+    <Property LongName="trigger_visualization.alwaysOnTop" Type="4"><![CDATA[4|0|Only at run time|Only at design time|No|Both at run time and design time]]></Property>
+    <Property LongName="trigger_visualization.moveable" Type="0">true</Property>
+    <Property LongName="trigger_visualization.hidden" Type="0">false</Property>
+    <Property LongName="trigger_visualization.title" Type="3"><![CDATA[]]></Property>
+    <Property LongName="trigger_visualization.x" Type="1">2001</Property>
+    <Property LongName="trigger_visualization.y" Type="1">696</Property>
+    <Property LongName="trigger_visualization.width" Type="1">400</Property>
+    <Property LongName="trigger_visualization.height" Type="1">350</Property>
+    <Property LongName="trigger_visualization.end_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="trigger_visualization.widget_end_config" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="trigger_visualization.specific_begin_config" Type="3" SubType="256"><![CDATA[Specific Configuration]]></ReadOnlyProperty>
+    <Property LongName="trigger_visualization.nbInputs" Type="1">2</Property>
+    <Property LongName="trigger_visualization.timeScale" Type="2">1</Property>
+    <Property LongName="trigger_visualization.timeOffset" Type="2">0</Property>
+    <Property LongName="trigger_visualization.scroll" Type="0">true</Property>
+    <Property LongName="trigger_visualization.showCommonPanel" Type="0">true</Property>
+    <Property LongName="trigger_visualization.showChannelPanel" Type="0">true</Property>
+    <Property LongName="trigger_visualization.triggerChannel" Type="4"><![CDATA[2|0|A|B]]></Property>
+    <Property LongName="trigger_visualization.triggerLevel" Type="2">0.9449696541</Property>
+    <Property LongName="trigger_visualization.triggerSlope" Type="4"><![CDATA[3|1|any|positive|negative]]></Property>
+    <Property LongName="trigger_visualization.memory" Type="1">500000</Property>
+    <Property LongName="trigger_visualization.pensWidth" Type="1">1</Property>
+    <Property LongName="trigger_visualization.refreshPeriod" Type="1">40000</Property>
+    <Property LongName="trigger_visualization.inputA_name" Type="3"><![CDATA[Channel A]]></Property>
+    <Property LongName="trigger_visualization.inputA_scale" Type="2">0.01125693321</Property>
+    <Property LongName="trigger_visualization.inputA_offset" Type="2">-0.9449696541</Property>
+    <Property LongName="trigger_visualization.inputA_isSigned" Type="0">false</Property>
+    <Property LongName="trigger_visualization.inputA_mode" Type="4"><![CDATA[3|0|Interpolated|Steps|Vertical bars]]></Property>
+    <Property LongName="trigger_visualization.inputA_color" Type="1" SubType="4">4227327</Property>
+    <Property LongName="trigger_visualization.inputA_showScale" Type="0">false</Property>
+    <Property LongName="trigger_visualization.inputB_name" Type="3"><![CDATA[Channel B]]></Property>
+    <Property LongName="trigger_visualization.inputB_scale" Type="2">0.1666666667</Property>
+    <Property LongName="trigger_visualization.inputB_offset" Type="2">-0.5</Property>
+    <Property LongName="trigger_visualization.inputB_isSigned" Type="0">false</Property>
+    <Property LongName="trigger_visualization.inputB_mode" Type="4"><![CDATA[3|0|Interpolated|Steps|Vertical bars]]></Property>
+    <Property LongName="trigger_visualization.inputB_color" Type="1" SubType="4">16776960</Property>
+    <Property LongName="trigger_visualization.inputB_showScale" Type="0">false</Property>
+    <ReadOnlyProperty LongName="trigger_visualization.specific_end_config" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="trigger_visualization.threaded" Type="0">true</Property>
+    <Property LongName="trigger_visualization.priority" Type="1">128</Property>
+    <Property LongName="trigger_visualization.autoStart" Type="0">true</Property>
+  </Component>
+  <Connection Output="Player_1.recording.output" Input="AnyColorSpaceConverter_1.imgInput">
+    <Replay Method="video_file"/>
+  </Connection>
+  <Connection Output="time_resampling.output" Input="clean_stream.input"/>
+  <Connection Output="AnyColorSpaceConverter_1.IplImageOutput" Input="NoveltyModule.image_in"/>
+  <Connection Output="AnyColorSpaceConverter_1.IplImageOutput" Input="redundant_stream.input"/>
+  <Connection Output="AnyColorSpaceConverter_1.IplImageOutput" Input="time_resampling.input_2"/>
+  <Connection Output="trigger.outputInteger" Input="time_resampling.index"/>
+  <Connection Output="NoveltyModule.similarity" Input="trigger.x"/>
+  <Connection Output="threshold.output0" Input="trigger.threshold"/>
+  <Connection Output="trigger.outputInteger" Input="trigger_visualization.inputB"/>
+  <RTBoardView ID="JavaStudio1.0">
+    <ComponentBox InstanceName="AnyColorSpaceConverter_1_1_2" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="Driver_Camera_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="image_viewer_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="ImageViewer_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="ImageViewer_1_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="ImageViewer_1_1_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="PythonBridge_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="Rear_Camera_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="threshold_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="total_num_objects_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="video_stream_decoder_1_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="video_stream_decoder_1_1_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ConnectionShape InstanceName="adapt_color_map.input" color="0"/>
+    <ConnectionShape InstanceName="adapt_color_map_1.input" color="0"/>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_1.imgInput" color="0"/>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_2.imgInput" color="0"/>
+    <ConnectionShape InstanceName="CANDecoder_1.input" color="0"/>
+    <ConnectionShape InstanceName="clean_stream.input" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects.input_0" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects.input_1" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects.input_2" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects_1.input_2" color="0"/>
+    <ConnectionShape InstanceName="CurrentNumObjects.input_0" color="0"/>
+    <ConnectionShape InstanceName="CurrentNumObjects.input_1" color="0"/>
+    <ConnectionShape InstanceName="CurrentNumObjects.input_2" color="0"/>
+    <ConnectionShape InstanceName="DataViewer_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="delphi_esr_radar_1_1.canFrame" color="0"/>
+    <ConnectionShape InstanceName="delphi_esr_radar_targets_to_realobjs_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="dropout.input0" color="0"/>
+    <ConnectionShape InstanceName="dropout_rate.input" color="0"/>
+    <ConnectionShape InstanceName="dropout_rate_1.input" color="0"/>
+    <ConnectionShape InstanceName="dropout_statistics.input_0" color="0"/>
+    <ConnectionShape InstanceName="dropout_statistics.input_1" color="0"/>
+    <ConnectionShape InstanceName="dropout_statistics_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="dropout_statistics_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="Front_Camera_1.input" color="0"/>
+    <ConnectionShape InstanceName="Front_Camera_Display_1.drawingObjects_1" color="0"/>
+    <ConnectionShape InstanceName="Front_Camera_Display_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="Get_Timestamps_1.input" color="0"/>
+    <ConnectionShape InstanceName="gps.iStream8" color="0"/>
+    <ConnectionShape InstanceName="image_viewer.iDrawingObjects" color="0"/>
+    <ConnectionShape InstanceName="image_viewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="image_viewer_2.iDrawingObjects" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1_1_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_2.input" color="0"/>
+    <ConnectionShape InstanceName="novelty_module.image_in" color="0"/>
+    <ConnectionShape InstanceName="novelty_module.threshold" color="0"/>
+    <ConnectionShape InstanceName="NoveltyModule.image_in" color="0"/>
+    <ConnectionShape InstanceName="object_detection.image_in" color="0"/>
+    <ConnectionShape InstanceName="object_detection.threshold" color="0"/>
+    <ConnectionShape InstanceName="object_detection_1.image_in" color="0"/>
+    <ConnectionShape InstanceName="ObjectDetection.image_in" color="0"/>
+    <ConnectionShape InstanceName="ObjectDetection.image_in_0" color="0"/>
+    <ConnectionShape InstanceName="ObjectDetection.image_in_1" color="0"/>
+    <ConnectionShape InstanceName="ObjectDetection.threshold" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1.drawingObjects" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1.input" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1_1.drawingObjects" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_2.drawingObjects" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_2.input" color="0"/>
+    <ConnectionShape InstanceName="Projection2_1_1.real_objects" color="0"/>
+    <ConnectionShape InstanceName="rear_camera.input_stream" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_188_CAN_VEH_Speed.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_190_CAN_VEH_Accel_Pedal_Demand.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_190_CAN_VEH_Brake_Pedal_Pos.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_390_CAN_VEH_U_Bat_HV.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_481_CAN_VEH_Park_Brake_State.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_485_CAN_VEH_Steering_Angle.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_497_CAN_VEH_Heat_AC_Disable.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_501_CAN_VEH_PNRDL.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_711_CAN_VEH_I_Bat_HV.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.front_camera.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.gps.position_lla.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.Bypass_TagsFromRTag.output_1.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.CAN4_Measures_1.o_can.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.CAN5_IMU_1.o_can.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.CAN6_Vehicle_1.o_can.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.FlexCard_CAN_Delphi_ESR_Radar.o_can.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.SerialPort_Ublox_NMEA.streamOutput.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.UDPSocket_Velodyne_VLP16.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.rear_camera.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.recording.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.video_stream_decoder_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.video_stream_decoder_1_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.video_stream_decoder_1_1_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.video_stream_decoder_1_1_1_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_188_CAN_VEH_Speed.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_190_CAN_VEH_Accel_Pedal_Demand.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_190_CAN_VEH_Brake_Pedal_Pos.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_390_CAN_VEH_U_Bat_HV.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_481_CAN_VEH_Park_Brake_State.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_485_CAN_VEH_Steering_Angle.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_497_CAN_VEH_Heat_AC_Disable.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_501_CAN_VEH_PNRDL.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_711_CAN_VEH_I_Bat_HV.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.front_camera.output.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.gps.position_lla.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.rear_camera.output.input" color="0"/>
+    <ConnectionShape InstanceName="recording.input" color="0"/>
+    <ConnectionShape InstanceName="redundancy_reduction.image_in" color="0"/>
+    <ConnectionShape InstanceName="redundancy_reduction.threshold" color="0"/>
+    <ConnectionShape InstanceName="redundancy_reduction_1.image_in" color="0"/>
+    <ConnectionShape InstanceName="redundancy_reduction_1.threshold" color="0"/>
+    <ConnectionShape InstanceName="redundant_stream.iDrawingObjects" color="0"/>
+    <ConnectionShape InstanceName="redundant_stream.input" color="0"/>
+    <ConnectionShape InstanceName="resampler_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="SampleRate_2.input" color="0"/>
+    <ConnectionShape InstanceName="Splitter_1.input" color="0"/>
+    <ConnectionShape InstanceName="stream_to_frame.input_stream" color="0"/>
+    <ConnectionShape InstanceName="stream_to_frame_1.input_stream" color="0"/>
+    <ConnectionShape InstanceName="TextViewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="time_resampling.index" color="0"/>
+    <ConnectionShape InstanceName="time_resampling.input_2" color="0"/>
+    <ConnectionShape InstanceName="timestamp_to_timestring_1.timestamp_usec" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects.input_0" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects.input_1" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects.input_2" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects_1.input_2" color="0"/>
+    <ConnectionShape InstanceName="TotalNumObjects.input_0" color="0"/>
+    <ConnectionShape InstanceName="TotalNumObjects.input_1" color="0"/>
+    <ConnectionShape InstanceName="TotalNumObjects.input_2" color="0"/>
+    <ConnectionShape InstanceName="trigger.threshold" color="0"/>
+    <ConnectionShape InstanceName="trigger.x" color="0"/>
+    <ConnectionShape InstanceName="trigger_visualization.inputA" color="0"/>
+    <ConnectionShape InstanceName="trigger_visualization.inputB" color="0"/>
+    <ConnectionShape InstanceName="video_stream_decoder_1.input_stream" color="0"/>
+    <ConnectionShape InstanceName="YUV2RGB_1.input" color="0"/>
+  </RTBoardView>
+</RTMapsDiagram>

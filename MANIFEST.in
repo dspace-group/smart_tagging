@@ -1,0 +1,4 @@
+graft smart_tagging
+include LICENSE.txt
+include README.md
+global-exclude *.py[cod] __pycache__ *.so
